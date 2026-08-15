@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --etec-red: #941611;
+  --etec-red-dark: #720f0b;
+  --etec-red-light: #f5e6e5;
+  --etec-slate: #4a555c;
+  --etec-slate-dark: #323d42;
+  --etec-slate-light: #6b7980;
+
+  --bg: #ffffff;
+  --surface: #f4f5f7;
+  --surface-2: #eaecef;
+  --border: #e2e6ea;
+  --border-strong: #c8ced5;
+
+  --text-1: #1a2128;
+  --text-2: #3d4a54;
+  --text-3: #5c6975;
+  --text-4: #8c99a4;
+
+  --status-approved-bg: #e8f5ee;
+  --status-approved-text: #1a7a4a;
+  --status-approved-border: #a8d9bc;
+
+  --status-pending-bg: #fff8e6;
+  --status-pending-text: #a05f00;
+  --status-pending-border: #f0d080;
+
+  --status-rejected-bg: #fdecea;
+  --status-rejected-text: #941611;
+  --status-rejected-border: #f5b8b5;
+
+  --status-cancelled-bg: #f0f2f4;
+  --status-cancelled-text: #5c6975;
+  --status-cancelled-border: #c8ced5;
+
+  --sidebar-w: 240px;
+  --topbar-h: 56px;
+  --radius: 8px;
+  --radius-sm: 5px;
+  --radius-lg: 12px;
+
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: var(--text-1);
+  background: var(--bg);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text-1);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-4); }
+
+button { cursor: pointer; font-family: inherit; }
+input, select, textarea { font-family: inherit; }
+
+.font-inter { font-family: 'Inter', system-ui, sans-serif; }
+
+/* Sidebar nav item active */
+.nav-item-active {
+  background: rgba(148, 22, 17, 0.15);
+  color: #ffffff;
+  border-left: 3px solid #941611;
+}
+.nav-item-active svg { color: #ef9490; }
+
+/* Smooth transitions */
+.sidebar-enter { transition: transform 0.25s cubic-bezier(.4,0,.2,1), opacity 0.2s; }
+
+/* Calendar grid */
+.cal-grid {
+  display: grid;
+  grid-template-columns: 56px repeat(var(--cal-cols, 5), 1fr);
+}
