@@ -278,15 +278,7 @@ function ProfileSelectScreen({ onSelect }: { onSelect: (user: User) => void }) {
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #f8f9fb 0%, #eef1f4 100%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
       {/* Logo */}
       <div style={{ marginBottom: 40, textAlign: 'center' }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 14, background: '#fff', borderRadius: 16, padding: '16px 28px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', border: '1px solid var(--border)' }}>
-          <div style={{ width: 48, height: 48, background: 'var(--etec-red)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-            <span style={{ color: '#fff', fontWeight: 800, fontSize: 18, fontStyle: 'italic', fontFamily: 'DM Sans' }}>E</span>
-          </div>
-          <div style={{ textAlign: 'left' }}>
-            <div style={{ fontWeight: 800, fontSize: 22, color: 'var(--etec-slate)', lineHeight: 1, letterSpacing: '-0.02em' }}>Etec</div>
-            <div style={{ fontWeight: 600, fontSize: 13, color: 'var(--etec-red)', letterSpacing: '0.02em' }}>Antônio Furlan</div>
-          </div>
-        </div>
+        <img src="/logo.png" alt="Etec Antônio Furlan" style={{ height: 64, marginBottom: 12, display: 'inline-block' }} />
         <h1 style={{ marginTop: 28, fontSize: 26, fontWeight: 700, color: 'var(--text-1)', letterSpacing: '-0.02em' }}>Sistema Integrado de Agendamento</h1>
         <p style={{ marginTop: 8, color: 'var(--text-3)', fontSize: 14 }}>Selecione seu perfil para continuar — modo demonstração</p>
       </div>
@@ -344,14 +336,8 @@ function Sidebar({ currentScreen, currentUser, onNavigate, onSwitchProfile, coll
       <aside style={{ position: 'fixed', top: 0, left: collapsed ? -240 : 0, width: 240, height: '100vh', background: 'var(--etec-slate)', display: 'flex', flexDirection: 'column', zIndex: 99, transition: 'left 0.25s cubic-bezier(.4,0,.2,1)', boxShadow: collapsed ? 'none' : '2px 0 12px rgba(0,0,0,0.15)' }}>
         {/* Logo */}
         <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <div style={{ width: 36, height: 36, background: 'var(--etec-red)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-              <span style={{ color: '#fff', fontWeight: 800, fontSize: 16, fontStyle: 'italic' }}>E</span>
-            </div>
-            <div>
-              <div style={{ fontWeight: 800, fontSize: 16, color: '#fff', lineHeight: 1 }}>Etec</div>
-              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 500, marginTop: 1 }}>Antônio Furlan</div>
-            </div>
+          <div style={{ background: '#fff', padding: '8px 12px', borderRadius: '8px', display: 'inline-block' }}>
+            <img src="/logo.png" alt="Etec" style={{ height: 40, display: 'block' }} />
           </div>
           <div style={{ marginTop: 10, fontSize: 11, color: 'rgba(255,255,255,0.4)', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase' }}>Agendamento Escolar</div>
         </div>
